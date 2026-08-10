@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phone Trackpad — Bluetooth trackpad, mouse &amp; keyboard for any computer</title>
+<meta name="description" content="Phone Trackpad turns your Android phone into a Bluetooth trackpad, mouse and keyboard for Windows, macOS, Linux, Android TV and more. No software to install on the computer.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --surface: #f5f5f7;
+    --fg: #1c1c1e;
+    --muted: #6e6e73;
+    --accent: #0a84ff;
+    --rule: #d2d2d7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --surface: #1c1c1e;
+      --fg: #f5f5f7;
+      --muted: #98989d;
+      --accent: #0a84ff;
+      --rule: #2c2c2e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  h1 {
+    font-size: 34px;
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 48px 0 12px;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 15px;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  p, li { margin: 12px 0; }
+  ul { padding-left: 1.2em; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .meta { color: var(--muted); font-size: 13px; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 40px 0; }
+
+  /* Hero */
+  .hero {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .hero img.icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,.18);
+  }
+  .hero-text { flex: 1 1 320px; min-width: 260px; }
+  .lede { font-size: 18px; color: var(--muted); margin: 8px 0 0; }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 28px 0 0;
+  }
+  .btn {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--rule);
+    color: var(--fg);
+    background: var(--surface);
+  }
+  .btn:hover { text-decoration: none; border-color: var(--accent); color: var(--accent); }
+  .btn.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .btn.primary:hover { color: #fff; opacity: .9; }
+
+  .banner {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 40px 0 0;
+    border: 1px solid var(--rule);
+  }
+
+  /* Cards */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 20px 0 0;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  .card p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+  /* Screenshots */
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+    margin: 20px 0 0;
+  }
+  .shot { text-align: center; }
+  .shot img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--rule);
+    display: block;
+  }
+  .shot figcaption {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+  figure { margin: 0; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 16px 0 0;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px 10px 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  th { font-weight: 600; color: var(--muted); font-size: 13px; }
+  tr:last-child td { border-bottom: none; }
+
+  code {
+    font: 13px/1.4 ui-monospace, "SF Mono", Menlo, monospace;
+    background: var(--rule);
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer a { color: var(--muted); text-decoration: underline; }
+
+  @media (max-width: 520px) {
+    h1 { font-size: 27px; }
+    main { padding: 32px 18px 72px; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<!-- ───────── Hero ───────── -->
+<div class="hero">
+  <img class="icon" src="assets/icon-512.png" alt="Phone Trackpad app icon">
+  <div class="hero-text">
+    <h1>Phone Trackpad</h1>
+    <p class="lede">Turn your Android phone into a Bluetooth trackpad, mouse and keyboard for any computer — with nothing to install on the computer.</p>
+  </div>
+</div>
+
+<div class="cta-row">
+  <a class="btn primary" href="https://play.google.com/store/apps/details?id=io.github.bhuvaneshne.apps.phonetrackpad">Get it on Google Play</a>
+  <a class="btn" href="privacy.html">Privacy Policy</a>
+  <a class="btn" href="mailto:bhu@chmod.in?subject=Phone%20Trackpad%20Question">Contact support</a>
+</div>
+
+<img class="banner" src="assets/feature.png" alt="Phone Trackpad — a phone being used as a trackpad for a laptop">
+
+<!-- ───────── What it is ───────── -->
+<h2>What it is</h2>
+<p>Phone Trackpad presents your phone to the computer over Bluetooth Classic as a standard <strong>HID device</strong> — the exact same protocol every commercial Bluetooth mouse and keyboard uses. The computer sees a generic Bluetooth mouse and keyboard and uses its own built-in drivers.</p>
+<p>That means <strong>no app, no daemon, no driver and no account on the host machine</strong>. You pair once from the computer's normal Bluetooth settings, exactly as you would pair a real mouse, and it works. Nothing is routed through the internet: the link is a direct, point-to-point Bluetooth connection between your phone and your computer.</p>
+
+<!-- ───────── Use cases ───────── -->
+<h2>Use cases</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Media PC on the TV</h3>
+    <p>Control a living-room computer or Android TV box from the sofa without a wireless mouse rolling off the armrest.</p>
+  </div>
+  <div class="card">
+    <h3>Presentations</h3>
+    <p>Advance slides and point at things from anywhere in the room, using the phone already in your hand.</p>
+  </div>
+  <div class="card">
+    <h3>Broken or missing trackpad</h3>
+    <p>A dead laptop trackpad or a lost mouse dongle stops being an emergency. Pair the phone and keep working.</p>
+  </div>
+  <div class="card">
+    <h3>Travel and cramped desks</h3>
+    <p>One less thing in the bag. Useful on a plane tray table, a café table, or a hot desk with no room for a mouse.</p>
+  </div>
+  <div class="card">
+    <h3>Lab, server and kiosk machines</h3>
+    <p>Machines you touch occasionally and don't want to keep a dedicated mouse for. No software may be installed on them — and none has to be.</p>
+  </div>
+  <div class="card">
+    <h3>Typing on a host without a keyboard</h3>
+    <p>Keyboard mode sends real key presses over the same link, including Esc, Tab, arrows and Ctrl / Alt / ⊞ Win combinations.</p>
+  </div>
+</div>
+
+<!-- ───────── Screenshots ───────── -->
+<h2>Screenshots</h2>
+<div class="shots">
+  <figure class="shot">
+    <img src="assets/00_pairing.png" alt="Pairing screen showing the discoverable countdown and reconnect button">
+    <figcaption>Pairing — make discoverable, then pair from the computer</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="assets/01_trackpad_in_use.png" alt="Trackpad surface with a left, middle and right button bar">
+    <figcaption>Trackpad surface with physical button bar</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="assets/04_keyboard_mode.png" alt="Keyboard mode with a special key row above the on-screen keyboard">
+    <figcaption>Keyboard mode with Esc / Tab / Ctrl / Alt / ⊞ Win / arrows</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="assets/02_settings.png" alt="Settings screen with gesture mapping and timing sliders">
+    <figcaption>Settings — remap gestures, tune sensitivity</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="assets/03_help_guide.png" alt="In-app help guide">
+    <figcaption>In-app help and troubleshooting guide</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="assets/05_compatibility.png" alt="Host compatibility list inside the app">
+    <figcaption>Host compatibility reference, built into the app</figcaption>
+  </figure>
+</div>
+
+<!-- ───────── Features ───────── -->
+<h2>Features</h2>
+<ul>
+  <li><strong>Mouse and keyboard over one link</strong> — a single composite HID profile carries pointer, buttons, scroll and key presses.</li>
+  <li><strong>Full gesture set</strong> — one-finger move, tap to click, two-finger tap and two-finger scroll, with a dedicated left / middle / right button bar for precision work.</li>
+  <li><strong>Remappable gestures</strong> — assign left, right, middle click or nothing to each gesture.</li>
+  <li><strong>Tuned pointer feel</strong> — sub-pixel accumulation, smoothing, pointer acceleration and flick inertia, all adjustable.</li>
+  <li><strong>Portrait, landscape and flipped</strong> orientations, so the phone can sit whichever way is comfortable.</li>
+  <li><strong>Auto-reconnect</strong> — reconnects to the last paired computer, and recovers when Bluetooth is toggled off and back on.</li>
+  <li><strong>Screen-friendly</strong> — the trackpad surface runs dark with the backlight dimmed to save battery.</li>
+  <li><strong>Offline by design</strong> — no analytics, no telemetry, no accounts, no ads. The app's input path uses no network at all; the only component that touches the internet is Google Play Billing, and only if you choose to tip.</li>
+</ul>
+
+<!-- ───────── Limitations ───────── -->
+<h2>Known limitations</h2>
+<p>Stated plainly, so nobody buys into something it isn't:</p>
+<ul>
+  <li>Bluetooth latency is roughly 10–30 ms, against under 5 ms for a wired mouse. Fine for everyday work; not suitable for competitive gaming.</li>
+  <li>Pairs as a standard mouse and keyboard, so there is no pinch-to-zoom or multi-finger OS gesture support, and no pressure sensitivity.</li>
+  <li>No palm rejection — resting a hand on the surface will move the pointer.</li>
+  <li>Keyboard mode assumes a US-QWERTY layout on the host. Other layouts may receive the wrong punctuation and symbols.</li>
+  <li>One connected computer at a time; switching requires disconnecting first.</li>
+  <li>Horizontal scroll needs Windows 10+, macOS 10.15+, or a modern Linux desktop.</li>
+  <li>Bluetooth range is around 5–10 m, reduced by walls and interference.</li>
+</ul>
+
+<!-- ───────── Compatibility ───────── -->
+<h2>Compatibility</h2>
+<table>
+  <tr><th>Host computer</th><td>Verified on Windows, macOS, Linux (BlueZ — Ubuntu, Fedora and other modern desktops), Android TV, and Android phones and tablets. Other devices that accept a standard Bluetooth mouse — smart displays, some game consoles — should work the same way. No software is installed on the host.</td></tr>
+  <tr><th>Phone</th><td>Android 9 (API 28) and newer, with Bluetooth Classic HID support. Works on phones and tablets.</td></tr>
+  <tr><th>Connection</th><td>Bluetooth Classic HID, point-to-point. No Wi-Fi, no internet, no server in the middle.</td></tr>
+</table>
+
+<!-- ───────── Pricing ───────── -->
+<h2>Pricing and payments</h2>
+<p><strong>Phone Trackpad is free.</strong> Every feature is available without paying, without an account, and without ads. There is no subscription, no trial period, and no locked functionality.</p>
+<p>The app includes an <strong>optional tip jar</strong> for users who want to support continued development. Tipping is entirely voluntary and changes nothing about how the app behaves — no feature is gated behind it.</p>
+<table>
+  <tr><th>Tip</th><th>India</th><th>Other countries</th></tr>
+  <tr><td>Small tip</td><td>₹49</td><td>US$0.99</td></tr>
+  <tr><td>Medium tip</td><td>₹99</td><td>US$2.99</td></tr>
+  <tr><td>Large tip</td><td>₹249</td><td>US$4.99</td></tr>
+</table>
+<p class="meta">Prices are set in INR and USD; other currencies are converted by Google Play. Taxes are assessed and collected by Google Play according to your country, and the final amount is shown before you confirm the purchase.</p>
+<p><strong>How payments are processed:</strong> all in-app payments are handled end-to-end by <strong>Google Play Billing</strong>. Phone Trackpad never sees, collects, stores or transmits any card number, UPI ID, bank detail, billing address or other payment information. The app receives only a confirmation flag that a purchase completed. Google Play acts as the merchant of record for these transactions.</p>
+
+<!-- ───────── Refunds ───────── -->
+<h2>Refunds and cancellation</h2>
+<p>Because the app is free, there is nothing to cancel and no recurring charge to stop. Uninstalling the app ends your use of it entirely; no account or data remains anywhere.</p>
+<p>For the optional tip purchases:</p>
+<ul>
+  <li>Refunds are handled by <strong>Google Play</strong>, the merchant of record. Requests can be made through <a href="https://support.google.com/googleplay/answer/2479637">Google Play's refund process</a>, which allows self-service refunds within 48 hours of purchase.</li>
+  <li>Outside that window, email <a href="mailto:bhu@chmod.in?subject=Phone%20Trackpad%20Refund">bhu@chmod.in</a> with the Google Play order ID. Refund requests for accidental or duplicate purchases are supported and will be raised with Google Play as promptly as possible.</li>
+  <li>Approved refunds are returned by Google Play to the original payment method, on Google Play's standard refund timelines. How long the money takes to appear depends on the payment method and the issuing bank.</li>
+  <li>There are no partial refunds, since tips are single one-time amounts.</li>
+</ul>
+
+<!-- ───────── Privacy ───────── -->
+<h2>Privacy and data</h2>
+<p>Phone Trackpad collects <strong>no personal data</strong>. There is no analytics SDK, no telemetry, no advertising identifier and no account system. Nothing you do on the trackpad or keyboard leaves your phone except as Bluetooth input to the computer you paired with. Bluetooth permissions exist solely to present the phone as a HID device and to send input to your paired computer.</p>
+<p>Full details, including a per-permission breakdown: <a href="privacy.html">Phone Trackpad Privacy Policy</a>.</p>
+
+<!-- ───────── Terms ───────── -->
+<h2>Terms of use</h2>
+<p>Phone Trackpad is provided as-is for personal and professional use as an input device. By installing and using the app you agree to the end-user licence agreement shown on first launch inside the app, which is also reproduced in the app under <em>Help → Legal</em>. In summary:</p>
+<ul>
+  <li>The app is licensed for personal use, not sold. Redistribution, modification, or commercial use without written permission is prohibited.</li>
+  <li>The app is provided as-is, without warranty of any kind, to the maximum extent permitted by applicable law. Your sole remedy for dissatisfaction is to stop using it.</li>
+  <li>Bluetooth behaviour varies between host operating systems and Bluetooth chipsets. Uninterrupted operation, and compatibility with any specific computer, are not guaranteed.</li>
+  <li>Android may restrict or terminate the app at any time to conserve battery or memory; this is outside the developer's control.</li>
+</ul>
+
+<!-- ───────── Support ───────── -->
+<h2>Support and contact</h2>
+<p>Support is provided by email, and every message gets a reply.</p>
+<table>
+  <tr><th>Support email</th><td><a href="mailto:bhu@chmod.in?subject=Phone%20Trackpad%20Question">bhu@chmod.in</a></td></tr>
+  <tr><th>Bug reports</th><td><a href="mailto:bhu@chmod.in?subject=Phone%20Trackpad%20Bug">bhu@chmod.in</a> — subject line <code>Phone Trackpad Bug</code></td></tr>
+  <tr><th>Feature requests</th><td><a href="mailto:bhu@chmod.in?subject=Phone%20Trackpad%20Feature">bhu@chmod.in</a> — subject line <code>Phone Trackpad Feature</code></td></tr>
+  <tr><th>Developer site</th><td><a href="../">bhuvaneshne.github.io</a></td></tr>
+</table>
+
+<!-- ───────── Developer details ───────── -->
+<h2>Developer details</h2>
+<table>
+  <tr><th>Published by</th><td>Bhuvanesh N E — individual developer (sole proprietor)</td></tr>
+  <tr><th>Location</th><td>Bangalore, Karnataka, India</td></tr>
+  <tr><th>Contact</th><td><a href="mailto:bhu@chmod.in">bhu@chmod.in</a></td></tr>
+  <tr><th>Application ID</th><td><code>io.github.bhuvaneshne.apps.phonetrackpad</code></td></tr>
+  <tr><th>Distribution</th><td>Google Play Store — <a href="https://play.google.com/store/apps/details?id=io.github.bhuvaneshne.apps.phonetrackpad">store listing</a>. This is the only official distribution channel; the app is not published on any other store or download site.</td></tr>
+  <tr><th>Category</th><td>Tools / Productivity</td></tr>
+  <tr><th>Payments</th><td>All in-app payments are processed by Google Play Billing. No payment details are collected, stored or processed by this app or its developer.</td></tr>
+</table>
+
+<p class="meta">Page last updated: 10 August 2026.</p>
+
+<footer>
+  Phone Trackpad — a free, no-ads, no-account Android app by Bhuvanesh N E ·
+  <a href="privacy.html">Privacy</a> ·
+  <a href="mailto:bhu@chmod.in">Contact</a> ·
+  <a href="../">Developer home</a>
+</footer>
+
+</main>
+</body>
+</html>

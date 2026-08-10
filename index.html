@@ -229,12 +229,43 @@
     }
 
     /* ── Apps ── */
-    .apps-note {
-      color: var(--muted);
-      font-size: 0.92rem;
-      text-align: center;
-      padding: 20px 0;
+    .app-entry {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: rgba(255,255,255,.03);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .2s, background .2s;
     }
+
+    .app-entry:hover {
+      border-color: var(--accent);
+      background: rgba(79,142,247,.08);
+    }
+
+    .app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .app-body { flex: 1; min-width: 0; }
+    .app-name { font-weight: 600; font-size: 0.97rem; }
+
+    .app-desc {
+      color: #b0b8cc;
+      font-size: 0.87rem;
+      line-height: 1.6;
+      margin: 4px 0 10px;
+    }
+
+    .app-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .app-tags .badge { font-size: 0.74rem; padding: 3px 10px; }
 
     /* ── Contact ── */
     .contact-links {
@@ -367,7 +398,22 @@
   <!-- Apps -->
   <div class="card">
     <h2>Apps</h2>
-    <p class="apps-note">Apps coming soon — stay tuned.</p>
+    <a class="app-entry" href="phonetrackpad/">
+      <img class="app-icon" src="phonetrackpad/assets/icon-512.png" alt="Phone Trackpad icon" />
+      <div class="app-body">
+        <div class="app-name">Phone Trackpad</div>
+        <div class="app-desc">
+          Turns an Android phone into a Bluetooth trackpad, mouse and keyboard for
+          Windows, macOS, Linux and Android TV — a standard HID device, so nothing
+          is installed on the computer. Free, offline, no ads.
+        </div>
+        <div class="app-tags">
+          <span class="badge">Kotlin</span>
+          <span class="badge">Bluetooth HID</span>
+          <span class="badge">Google Play</span>
+        </div>
+      </div>
+    </a>
   </div>
 
   <!-- Contact -->
