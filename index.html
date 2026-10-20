@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhuvanesh Nangaru — Principal Architect, 4G/5G & Cloud Networking</title>
+  <title>Bhuvanesh Nangaru — Architect, Private 4G/5G &amp; Packet Fastpath</title>
+  <meta name="description" content="Architect with 20 years in telecom and networking: private 4G/5G, 5G UPF, DPDK/VPP, SDN/P4 and SD-PON." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://bhuvaneshne.github.io/" />
+  <meta property="og:title" content="Bhuvanesh Nangaru — Architect, Private 4G/5G &amp; Packet Fastpath" />
+  <meta property="og:description" content="20 years in telecom and networking: private 4G/5G, 5G UPF, DPDK/VPP, SDN/P4 and SD-PON." />
+  <meta property="og:image" content="https://bhuvaneshne.github.io/assets/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="627" />
+  <meta name="twitter:card" content="summary_large_image" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -313,19 +322,20 @@
 <header>
   <div class="avatar">BN</div>
   <h1>Bhuvanesh Nangaru</h1>
-  <p class="headline">Principal Architect &nbsp;·&nbsp; 4G/5G Edge &nbsp;·&nbsp; Cloud Networking &nbsp;·&nbsp; Secure Edge Platforms</p>
+  <p class="headline">Architect &nbsp;·&nbsp; Private 4G/5G &amp; Packet Fastpath &nbsp;·&nbsp; 5G UPF, DPDK/VPP, SDN/P4</p>
   <p class="tagline">
-    ~20 years architecting cloud-native telecom and networking products across
-    private 4G/5G, programmable dataplanes, and enterprise secure networking.
+    I design, build and debug the systems that carry traffic at scale — from the
+    packet fastpath to cloud-native edge deployments. 20 years in telecom and
+    networking, architect since 2011.
   </p>
   <div class="badges">
     <span class="badge">Private 4G/5G</span>
-    <span class="badge">Cloud-Native</span>
-    <span class="badge">Programmable Dataplane</span>
-    <span class="badge">SDN / NPU</span>
+    <span class="badge">5G UPF</span>
+    <span class="badge">DPDK / VPP</span>
+    <span class="badge">SDN / P4</span>
     <span class="badge">Kubernetes</span>
-    <span class="badge">C / C++ / Golang</span>
-    <span class="badge">Performance Engineering</span>
+    <span class="badge">C / C++ / Go / Python</span>
+    <span class="badge">Software Defined PON</span>
   </div>
 </header>
 
@@ -335,13 +345,71 @@
   <div class="card">
     <h2>About</h2>
     <p class="about-text">
-      Principal technology leader with ~20 years of experience architecting cloud-native telecom
-      and networking products. Specialised in private 4G/5G core networks, programmable dataplanes,
-      and enterprise secure networking. Currently leading core architecture and a team of engineers
-      in a startup environment, driving platform, networking, and security domains across an entire
-      product line. Personal interests include app development, embedded systems, and home automation,
-      fishkeeping, automotive mechanics, motorcycles, and cycling.
+      At Highway9 Networks (private 4G/5G for enterprises) I lead core architecture for the edge
+      platform: 4G/5G core, user plane, enterprise network integration, bare-metal and air-gapped
+      deployments, and the radio side — CBRS, PTP timing and radio diagnostics. I took field
+      deployments from frequent crashes to 6+ months of sustained uptime, introduced a Secure Web
+      Gateway on the 4G edge, and lead root-cause analysis on field escalations that cross edge,
+      radio and cloud.
     </p>
+    <p class="about-text" style="margin-top: 14px;">
+      Before that, ten years at Radisys as an architect — GTP load balancing, P4/OpenFlow packet
+      engines, Software Defined PON, hyperscale DPDK EPC and 5G UPF — and five at Tech Mahindra on
+      LTE, UMA/GANC and CDMA. Outside work: app development, embedded systems, home automation,
+      fishkeeping, automotive mechanics, motorcycles and cycling.
+    </p>
+  </div>
+
+  <!-- Experience -->
+  <div class="card">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="job">
+        <div class="job-dot"><div class="dot"></div><div class="line"></div></div>
+        <div>
+          <div class="job-title">Architect</div>
+          <div class="job-company">Highway9 Networks</div>
+          <div class="job-period">Jan 2022 – Present</div>
+          <ul class="job-bullets">
+            <li>Core architecture for the enterprise private 4G/5G edge platform, across platform, networking and security.</li>
+            <li>Took field deployments from frequent crashes to 6+ months of sustained uptime.</li>
+            <li>Architected and introduced a Secure Web Gateway on the 4G edge platform.</li>
+            <li>Cut core installation from 30 to under 10 minutes through image cloning and automation.</li>
+            <li>5G UPF on VPP (MOCN fastpath, PFCP extensions), DPDK on SR-IOV, Intel QAT crypto offload for IPsec.</li>
+            <li>CBRS domain proxy, O-RAN M-plane radio integration, PTP fronthaul design.</li>
+            <li>Lead root-cause analysis on customer escalations across edge, radio and cloud.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-dot"><div class="dot"></div><div class="line"></div></div>
+        <div>
+          <div class="job-title">Senior Architect · Architect</div>
+          <div class="job-company">Radisys</div>
+          <div class="job-period">Jul 2011 – Dec 2021</div>
+          <ul class="job-bullets">
+            <li>GTP load balancer on a dual-blade Cavium system: 250K PPS GTP-C and 80 Gbps user plane.</li>
+            <li>Hardware packet-processing engines up to 400 Gbps: OpenFlow → P4 → auto-generated pipelines.</li>
+            <li>Software Defined PON on Broadcom BAL / OpenOLT for GPON and XGS-PON.</li>
+            <li>5G UPF control plane, hyperscale cloud EPC datapath on DPDK, Kubernetes-based CBRS cloud gateway.</li>
+            <li>P4 on Mellanox NPS, VPP plugins, NXP DPAA; eNodeB port to TI Keystone II; Trillium LTE stacks.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-dot"><div class="dot"></div><div class="line"></div></div>
+        <div>
+          <div class="job-title">Senior Software Engineer</div>
+          <div class="job-company">Tech Mahindra</div>
+          <div class="job-period">Jul 2006 – Jul 2011</div>
+          <ul class="job-bullets">
+            <li>Lead engineer on an LTE radio network simulator, on-site in the USA for a tier-1 operator's greenfield 4G core.</li>
+            <li>Lead developer of PDCP, RLC and S1AP protocol stacks.</li>
+            <li>CDMA MSC-VLR development and validation; UMA/GANC; IMS platform.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Skills -->
@@ -354,11 +422,11 @@
       </tr>
       <tr>
         <td>Platforms</td>
-        <td>Broadcom QAX, NPX DPAA, Nvidia CUDA, Mellanox NPS, Cavium Octeon II, TI Keystone II, Freescale QorIQ, Ubuntu Core</td>
+        <td>Broadcom QAX, NXP DPAA, Nvidia CUDA, Mellanox NPS, Cavium Octeon II, TI Keystone II, Freescale QorIQ, Ubuntu Core</td>
       </tr>
       <tr>
         <td>Languages</td>
-        <td>C/C++, Python, Golang, Shell, Ansible</td>
+        <td>C/C++, Python, Go, Shell, Ansible</td>
       </tr>
       <tr>
         <td>Virtualization</td>
@@ -424,7 +492,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
         bhu@chmod.in
       </a>
-      <a class="contact-link" href="https://www.linkedin.com/in/bhuvanesh-nangaru-47b99720/" target="_blank" rel="noopener">
+      <a class="contact-link" href="https://www.linkedin.com/in/bhuvanesh-nangaru/" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
       </a>
