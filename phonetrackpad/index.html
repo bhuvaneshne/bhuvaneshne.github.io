@@ -233,6 +233,10 @@
     <p>Machines you touch occasionally and don't want to keep a dedicated mouse for. No software may be installed on them — and none has to be.</p>
   </div>
   <div class="card">
+    <h3>Long downloads and presentations</h3>
+    <p>Keep-awake mode nudges the pointer on a timer so the host does not lock mid-render, mid-download, or mid-slide. Set a duration and it stops by itself.</p>
+  </div>
+  <div class="card">
     <h3>Typing on a host without a keyboard</h3>
     <p>Keyboard mode sends real key presses over the same link, including Esc, Tab, arrows and Ctrl / Alt / ⊞ Win combinations.</p>
   </div>
@@ -272,6 +276,7 @@
 <ul>
   <li><strong>Mouse and keyboard over one link</strong> — a single composite HID profile carries pointer, buttons, scroll and key presses.</li>
   <li><strong>Full gesture set</strong> — one-finger move, tap to click, two-finger tap and two-finger scroll, with a dedicated left / middle / right button bar for precision work.</li>
+  <li><strong>Keep your computer awake</strong> — stops the host locking or sleeping during a long download, a presentation, or anything you are reading or watching. Six nudge patterns from a single invisible pixel to a visible sweep, an optional session timer with a live countdown, and touching the trackpad always takes priority.</li>
   <li><strong>Remappable gestures</strong> — assign left, right, middle click or nothing to each gesture.</li>
   <li><strong>Tuned pointer feel</strong> — sub-pixel accumulation, smoothing, pointer acceleration and flick inertia, all adjustable.</li>
   <li><strong>Portrait, landscape and flipped</strong> orientations, so the phone can sit whichever way is comfortable.</li>
@@ -289,8 +294,10 @@
   <li>No palm rejection — resting a hand on the surface will move the pointer.</li>
   <li>Keyboard mode assumes a US-QWERTY layout on the host. Other layouts may receive the wrong punctuation and symbols.</li>
   <li>One connected computer at a time; switching requires disconnecting first.</li>
+  <li>Keep-awake runs only while the trackpad screen is on. It stops if the phone screen is switched off or the app is left, so there is no background mode.</li>
   <li>Horizontal scroll needs Windows 10+, macOS 10.15+, or a modern Linux desktop.</li>
   <li>Bluetooth range is around 5–10 m, reduced by walls and interference.</li>
+        <li>Pair from the computer while the app is open. Pairing from the phone’s own Bluetooth settings, or while the app is closed, can make the computer treat the phone as an ordinary phone rather than a trackpad — the app detects this and tells you how to fix it.</li>
 </ul>
 
 <!-- ───────── Compatibility ───────── -->
@@ -331,7 +338,7 @@
 <p>Full details, including a per-permission breakdown: <a href="privacy.html">Phone Trackpad Privacy Policy</a>.</p>
 
 <!-- ───────── Terms ───────── -->
-<h2>Terms of use</h2>
+<h2 id="terms">Terms of use</h2>
 <p>Phone Trackpad is provided as-is for personal and professional use as an input device. By installing and using the app you agree to the end-user licence agreement shown on first launch inside the app, which is also reproduced in the app under <em>Help → Legal</em>. In summary:</p>
 <ul>
   <li>The app is licensed for personal use, not sold. Redistribution, modification, or commercial use without written permission is prohibited.</li>
@@ -339,6 +346,7 @@
   <li>Bluetooth behaviour varies between host operating systems and Bluetooth chipsets. Uninterrupted operation, and compatibility with any specific computer, are not guaranteed.</li>
   <li>Android may restrict or terminate the app at any time to conserve battery or memory; this is outside the developer's control.</li>
 </ul>
+<p>Nothing in these terms limits any rights you have as a consumer under the laws of your country, including the European Union and United Kingdom consumer protection laws that apply to purchases from a trader.</p>
 
 <!-- ───────── Support ───────── -->
 <h2>Support and contact</h2>
